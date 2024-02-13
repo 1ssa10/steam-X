@@ -37,7 +37,7 @@ const Globe = (props) => {
       globeRef.current.arcsData(arcData2); // Show Algeria to Spain arc
       globeRef.current.arcDashInitialGap(1);
       globeRef.current.arcColor((d) => d.color);
-      globeRef.current.arcDashAnimateTime(3000);
+      globeRef.current.arcDashAnimateTime(6000);
       globeRef.current.arcsTransitionDuration(3000);
       globeRef.current.arcDashGap(1);
     }, 3000);
@@ -60,8 +60,10 @@ const Globe = (props) => {
   }, []);
   useFrame((state, delta) => {
     const time = state.clock.getElapsedTime();
-    globeRef.current.rotation.y = time * 0.1;
+    globeRef.current.rotation.y = time * 0.05;
   });
-  return <primitive ref={globeRef} object={MyGlobe} scale={1} position-y={0} />;
+  return (
+    <primitive ref={globeRef} object={MyGlobe} scale={0.05} position-y={0} />
+  );
 };
 export default Globe;

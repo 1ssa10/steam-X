@@ -221,7 +221,7 @@ const arcData = [
     startLng: -74.006,
     endLat: 48.8566, // Europe (Paris)
     endLng: 2.3522,
-    color: "yellow",
+    color: "red",
   },
   {
     startLat: -23.5505, // South America (São Paulo)
@@ -272,6 +272,41 @@ const arcData = [
     endLng: -3.7038,
     color: "magneta",
   },
+  {
+    startLat: -37.8136,
+    startLng: 144.9631,
+    endLat: 19.076,
+    endLng: 72.8777,
+    color: "red",
+  },
+  {
+    startLat: -33.8688,
+    startLng: 151.2093,
+    endLat: 28.7041,
+    endLng: 77.1025,
+    color: "green",
+  },
+  {
+    startLat: 55.7558,
+    startLng: 37.6176,
+    endLat: 39.9042,
+    endLng: 116.4074,
+    color: "purple",
+  },
+  {
+    startLat: 59.9343,
+    startLng: 30.3351,
+    endLat: 31.2304,
+    endLng: 121.4737,
+    color: "orange",
+  },
+  {
+    startLat: 39.9042,
+    startLng: 116.4074,
+    endLat: -33.8688,
+    endLng: 151.2093,
+    color: "blue",
+  },
 ];
 
 export const arcData2 = [
@@ -294,6 +329,8 @@ export const arcData2 = [
   arcData[32],
   arcData[34],
   arcData[36],
+  arcData[38],
+  arcData[40],
 ];
 
 export const arcData3 = [
@@ -322,5 +359,9 @@ export const arcData3 = [
   arcData[33],
   arcData[34],
   arcData[36],
+  arcData[37],
+  arcData[38],
+  arcData[40],
+  arcData[41],
 ];
 export default arcData;

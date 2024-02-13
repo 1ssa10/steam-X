@@ -12,7 +12,7 @@ export default function Home() {
         fov: 45,
         near: 0.1,
         far: 400,
-        position: [0, 0, 200],
+        position: [0, 0, 20],
       }}
     >
       <OrbitControls />
