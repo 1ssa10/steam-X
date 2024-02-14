@@ -3,20 +3,6 @@ import { useThree, useFrame } from "@react-three/fiber";
 import ThreeGlobe from "three-globe";
 import arcData, { arcData2, arcData3 } from "./ArcData";
 
-const sData = [
-  {
-    startLat: 36.7322, // Algeria (Algiers)
-    startLng: 3.0877,
-    endLat: 40.4168, // Spain (Madrid)
-    endLng: -3.7038,
-  },
-  {
-    startLat: 36.8065, // Tunisia (Tunis)
-    startLng: 10.1815,
-    endLat: 40.4168, // Spain (Madrid)
-    endLng: -3.7038,
-  },
-];
 const MyGlobe = new ThreeGlobe()
   .globeImageUrl("//unpkg.com/three-globe/example/img/earth-night.jpg")
   .bumpImageUrl("//unpkg.com/three-globe/example/img/earth-topology.png")

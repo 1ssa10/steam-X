@@ -1,11 +1,11 @@
 "use client";
+import dynamic from "next/dynamic";
 
-import Earth from "@/components/Earth";
-import Milo from "@/components/Milo";
-
-import { OrbitControls, Stars } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 
+const DynamicSapce = dynamic(() => import("@/components/Space"), {
+  ssr: false,
+});
 export default function Home() {
   return (
     <Canvas
@@ -16,15 +16,7 @@ export default function Home() {
         position: [0, 0, 20],
       }}
     >
-      <OrbitControls />
-      <directionalLight position={[0, 10, 10]} intensity={10} />
-      {/* <mesh scale={[2, 3, 2]}>
-          <boxGeometry args={[1, 1, 1, 2, 2, 2]} />
-          <meshBasicMaterial wireframe color="red" />
-        </mesh> */}
-      <Milo />
-      <Earth id={"earth"} />
-      <Stars />
+      <DynamicSapce />
     </Canvas>
   );
 }
