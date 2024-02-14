@@ -6,17 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "vercel --prod"
   },
   "dependencies": {
     "@react-three/drei": "^9.97.3",
     "@react-three/fiber": "^8.15.16",
     "next": "14.1.0",
-    "r3f-perf": "6.5",
     "react": "^18",
     "react-dom": "^18",
     "three": "^0.161.0",
-    "three-globe": "^2.30.2"
+    "three-globe": "^2.30.2",
+    "vercel": "^33.5.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
