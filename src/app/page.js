@@ -2,8 +2,10 @@
 
 import Earth from "@/components/Earth";
 import Milo from "@/components/Milo";
-import { OrbitControls } from "@react-three/drei";
+
+import { OrbitControls, Stars } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
+import { Perf } from "r3f-perf";
 
 export default function Home() {
   return (
@@ -15,6 +17,7 @@ export default function Home() {
         position: [0, 0, 20],
       }}
     >
+      {/* <Perf /> */}
       <OrbitControls />
       <directionalLight position={[0, 10, 10]} intensity={10} />
       {/* <mesh scale={[2, 3, 2]}>
@@ -23,6 +26,7 @@ export default function Home() {
         </mesh> */}
       <Milo />
       <Earth id={"earth"} />
+      <Stars />
     </Canvas>
   );
 }

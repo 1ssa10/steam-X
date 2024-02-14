@@ -44,11 +44,9 @@ const Globe = (props) => {
 
     const timeout2 = setTimeout(() => {
       globeRef.current.arcsData(arcData3);
-      // Show Algeria to Spain and Tunisia to Spain arcs
     }, 4500);
     const timeout3 = setTimeout(() => {
       globeRef.current.arcsData(arcData);
-      // Show Algeria to Spain and Tunisia to Spain arcs
     }, 6000);
 
     // Clean up timeouts
