@@ -1,9 +1,10 @@
-import { OrbitControls, Stars } from "@react-three/drei";
+import { Html, OrbitControls, Stars, Text } from "@react-three/drei";
 import React, { useRef } from "react";
 import Milo from "./Milo";
 import Earth from "./Earth";
-import { Perf } from "r3f-perf";
+
 import { useFrame } from "@react-three/fiber";
+import UI from "./UI";
 
 function Space() {
   const starRef = useRef();

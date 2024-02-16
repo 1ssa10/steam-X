@@ -11,7 +11,7 @@ const MyGlobe = new ThreeGlobe()
   .arcDashInitialGap(1);
 
 const Globe = (props) => {
-  const { scene } = useThree();
+  const { scene, size } = useThree();
   const globeRef = useRef();
 
   useEffect(() => {
@@ -46,8 +46,21 @@ const Globe = (props) => {
     const time = state.clock.getElapsedTime();
     globeRef.current.rotation.y = time * 0.2;
   });
+
+  const scaleRatio = size.height > size.width ? size.height : size.width;
+  console.log(((scaleRatio / 10) * 0.001).toFixed(2));
+  const scaleMulti = scaleRatio >= 1281 ? 0.0005 : 0.001;
+  console.log(scaleMulti);
+  const scaleEarth = ((scaleRatio / 10) * scaleMulti).toFixed(2);
+  console.log(scaleEarth);
+
   return (
-    <primitive ref={globeRef} object={MyGlobe} scale={0.05} position-y={0} />
+    <primitive
+      ref={globeRef}
+      object={MyGlobe}
+      scale={scaleEarth}
+      position-y={-5}
+    />
   );
 };
 export default Globe;

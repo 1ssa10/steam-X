@@ -123,7 +123,7 @@ const arcData = [
     startLng: 10.1815,
     endLat: 33.8869,
     endLng: 9.5375,
-    color: "magenta",
+    color: "cyan",
   },
   {
     startLat: 15.5527,
@@ -270,7 +270,7 @@ const arcData = [
     startLng: 10.1815,
     endLat: 40.4168, // Spain (Madrid)
     endLng: -3.7038,
-    color: "magneta",
+    color: "cyan",
   },
   {
     startLat: -37.8136,
