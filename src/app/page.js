@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 
 import { Canvas } from "@react-three/fiber";
 import UI from "@/components/UI";
+import Navbar from "@/components/Navbar";
 
 const DynamicSapce = dynamic(() => import("@/components/Space"), {
   ssr: false,
@@ -20,7 +21,8 @@ export default function Home() {
       >
         <DynamicSapce />
       </Canvas>
-      <UI />
+      <Navbar />
+      {/* <UI /> */}
     </>
   );
 }

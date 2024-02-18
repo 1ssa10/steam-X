@@ -22,7 +22,10 @@ const Globe = (props) => {
     const timeout1 = setTimeout(() => {
       globeRef.current.arcsData(arcData2);
       globeRef.current.arcDashInitialGap(1);
+      //custom colors
       globeRef.current.arcColor((d) => d.color);
+      //specific color
+      // globeRef.current.arcColor(() => "#F3D849");
       globeRef.current.arcDashAnimateTime(9000);
       globeRef.current.arcsTransitionDuration(6000);
       globeRef.current.arcDashGap(1);
@@ -44,21 +47,14 @@ const Globe = (props) => {
   }, []);
   useFrame((state, delta) => {
     const time = state.clock.getElapsedTime();
-    globeRef.current.rotation.y = time * 0.2;
+    globeRef.current.rotation.y = time * 0.1;
   });
-
-  const scaleRatio = size.height > size.width ? size.height : size.width;
-  console.log(((scaleRatio / 10) * 0.001).toFixed(2));
-  const scaleMulti = scaleRatio >= 1281 ? 0.0005 : 0.001;
-  console.log(scaleMulti);
-  const scaleEarth = ((scaleRatio / 10) * scaleMulti).toFixed(2);
-  console.log(scaleEarth);
 
   return (
     <primitive
       ref={globeRef}
       object={MyGlobe}
-      scale={scaleEarth}
+      scale={props.scale}
       position-y={-5}
     />
   );
