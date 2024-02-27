@@ -1,6 +1,6 @@
 import { useGLTF } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
-import React, { Children, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 
 function Milo() {
@@ -9,13 +9,16 @@ function Milo() {
   const miloRef = useRef();
   const { scene, size, camera } = useThree();
 
-  console.log(miloRef.current);
   useFrame((state, delta) => {
     if (size.width / size.height < 1) {
       state.camera.lookAt(new THREE.Vector3(1.7, 0.2, 2));
       state.camera.position.z = 5;
+    } else {
+      state.camera.lookAt(new THREE.Vector3(0, 0, 0));
+      state.camera.position.z = 4;
     }
   });
+
   console.log(size.width / size.height);
   milo.scene.traverse((child) => {
     if (child.isMesh) {
