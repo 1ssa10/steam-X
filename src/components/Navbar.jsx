@@ -10,6 +10,7 @@ function Navbar() {
           Get Started
         </button>
       </div>
+      <div className=" absolute left-0"></div>
     </div>
   );
 }

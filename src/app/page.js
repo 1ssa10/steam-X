@@ -1,25 +1,26 @@
 "use client";
-import dynamic from "next/dynamic";
 
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useThree } from "@react-three/fiber";
 import UI from "@/components/UI";
 import Navbar from "@/components/Navbar";
+import Moon from "@/components/Moon";
+import { OrbitControls } from "@react-three/drei";
 
-const DynamicSapce = dynamic(() => import("@/components/Space"), {
-  ssr: false,
-});
 export default function Home() {
   return (
     <>
       <Canvas
+        shadows
         camera={{
           fov: 45,
           near: 0.1,
           far: 400,
-          position: [0, 0, 20],
+          position: [2, 0.5, 4],
         }}
       >
-        <DynamicSapce />
+        <OrbitControls />
+        <ambientLight intensity={2} />
+        <Moon />
       </Canvas>
       <Navbar />
       {/* <UI /> */}
