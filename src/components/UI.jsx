@@ -5,7 +5,7 @@ function UI() {
   return (
     <>
       <div className="interface">
-        <div className="title">Steam-x</div>
+        {/* <div className="title">Steam-x</div> */}
         <div className="button"></div>
       </div>
       <div className="absolute  top-1/3 text-custom-yellow lg:w-1/2 sm:w-screen md:w-screen  text-center ">
