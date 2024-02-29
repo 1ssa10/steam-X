@@ -34,7 +34,7 @@ export default function Home() {
         >
           <ambientLight intensity={2} />
           <Moon />
-          {/* <Earth /> */}
+          <Earth />
         </PresentationControls>
       </Canvas>
       <Navbar />
