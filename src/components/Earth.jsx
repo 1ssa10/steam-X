@@ -35,7 +35,7 @@ function Earth() {
   return (
     <>
       <mesh position={[0, -15, -70]} scale={15} ref={earthRef}>
-        <sphereGeometry args={[2, 64, 64]} />
+        <sphereGeometry args={[2, 32, 32]} />
         {/* <erathMaterial /> */}
         <shaderMaterial
           vertexShader={vertexShader}
@@ -54,7 +54,7 @@ function Earth() {
         />
       </mesh>
       <mesh position={[0, -15, -70]} scale={15.5} ref={atmosphereRef}>
-        <sphereGeometry args={[2, 64, 64]} />
+        <sphereGeometry args={[2, 32, 32]} />
         <shaderMaterial
           side={THREE.BackSide}
           transparent={true}

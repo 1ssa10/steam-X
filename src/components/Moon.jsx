@@ -25,7 +25,7 @@ function Moon() {
       <Stars ref={starRef} />
       <Milo />
       <mesh rotation-x={-Math.PI / 2} receiveShadow>
-        <planeGeometry args={[10, 10, 512, 512]} />
+        <planeGeometry args={[10, 10, 32, 32]} />
         <meshStandardMaterial
           map={colorMap}
           displacementMap={displacementMap}
