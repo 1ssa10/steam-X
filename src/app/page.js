@@ -6,17 +6,22 @@ import Navbar from "@/components/Navbar";
 import Moon from "@/components/Moon";
 import { OrbitControls, PresentationControls } from "@react-three/drei";
 import { Perf } from "r3f-perf";
-import { Suspense, useEffect } from "react";
+import { Suspense, useEffect, useState } from "react";
 import Earth from "@/components/Earth";
 import * as THREE from "three";
 export default function Home() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
   return (
     <>
       <Suspense
         fallback={
-          <div className=" absolute left-1/2 top-1/2 text-white">
-            loading...
-          </div>
+          <h1 className=" absolute left-1/2 top-1/2 text-white">
+            {isClient && "loading..."}
+          </h1>
         }
       >
         <Canvas
@@ -39,7 +44,7 @@ export default function Home() {
             azimuth={[-0.25, 0.5]}
             config={{ mass: 2, tension: 200 }}
           >
-            <ambientLight intensity={2} />
+            <ambientLight intensity={0} />
 
             <Moon />
             <Earth />

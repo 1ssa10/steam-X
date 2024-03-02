@@ -5,14 +5,12 @@ import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 function Moon() {
   const starRef = useRef();
-  const [colorMap, displacementMap, aoMap, normalMap, roughnessMap] =
-    useTexture([
-      "./textures/moon/rock_boulder_dry_diff_1k.jpg ",
-      "./textures/moon/rock_boulder_dry_disp_1k.png",
-      "./textures/moon/rock_boulder_dry_ao_1k.jpg",
-      "./textures/moon/rock_boulder_dry_nor_gl_1k.jpg",
-      "./textures/moon/rock_boulder_dry_rough_1k.jpg",
-    ]);
+  const [colorMap, displacementMap, aoMap, roughnessMap] = useTexture([
+    "./textures/moon/imagecompressor/rock_boulder_dry_diff_1k-min.jpg ",
+    "./textures/moon/imagecompressor/rock_boulder_dry_disp_1k-min.png",
+    "./textures/moon/imagecompressor/rock_boulder_dry_ao_1k-min.jpg",
+    "./textures/moon/imagecompressor/rock_boulder_dry_rough_1k-min.jpg",
+  ]);
   colorMap.colorSpace = THREE.SRGBColorSpace;
   useFrame((state, delta) => {
     const time = state.clock.getElapsedTime();
@@ -31,8 +29,6 @@ function Moon() {
           displacementMap={displacementMap}
           displacementScale={0.5}
           aoMap={aoMap}
-          normalMap={normalMap}
-          normalScale={0.5}
           roughnessMap={roughnessMap}
         />
       </mesh>
