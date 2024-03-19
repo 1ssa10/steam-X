@@ -14,7 +14,7 @@ module.exports = {
       },
       colors: {
         "custom-blue": "#0A62D0",
-        "csutom-black": "#191718",
+        "custom-black": "#191718",
         "custom-white": "#e0e5e9",
         "custom-yellow": "#f3d849",
       },

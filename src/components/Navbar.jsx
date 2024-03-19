@@ -1,16 +1,75 @@
 import React from "react";
-import Navigations from "./Navigations";
 
 function Navbar() {
   return (
-    <div className="navbar py-4 relative">
-      <Navigations className={"font-bold text-2xl"} onhover={"underline"} />
-      <div className=" absolute  sm:right-10  right-0  items-center ">
-        <button className="bg-custom-blue text-custom-white py-3 px-2 rounded-full text-xl ">
-          Get Started
-        </button>
-      </div>
-      <div className=" absolute left-0"></div>
+    // positioning of the main container
+    <div className=" absolute top-1 w-full ">
+      {/* nav Container */}
+      <nav className="max-w-6xl mx-auto hidden items-center justify-between md:flex h-20">
+        {/* Menu Container */}
+        <div className="flex  mx-6 p-3 space-x-6 h-full items-center justify-center ">
+          {/* item 1 */}
+          <div className="group  hover:-translate-y-0.5 transition duration-150">
+            <a
+              href="#"
+              className="text-white text-center  text-lg font-bold capitalize  group-hover:text-custom-yellow"
+            >
+              about
+            </a>
+            <div className=" hidden border-b border-2 border-white mx-4 group-hover:block  group-hover:border-custom-yellow"></div>
+          </div>
+
+          {/* item 2 */}
+          <div className="group  hover:-translate-y-0.5 transition duration-150 ">
+            <a
+              href="#"
+              className="text-white text-center  text-lg font-bold capitalize group-hover:text-custom-yellow"
+            >
+              events
+            </a>
+            <div className=" hidden border-b border-2 border-white mx-4 group-hover:block  group-hover:border-custom-yellow"></div>
+          </div>
+
+          {/* item 3 */}
+          <div className="group  hover:-translate-y-0.5 transition duration-150">
+            <a
+              href="#"
+              className="text-white text-center text-lg font-bold capitalize  group-hover:text-custom-yellow"
+            >
+              store
+            </a>
+            <div className=" hidden border-b border-2 border-white mx-4 group-hover:block  group-hover:border-custom-yellow"></div>
+          </div>
+
+          {/* item 4 */}
+          <div className="group  hover:-translate-y-0.5 transition duration-150">
+            <a
+              href="#"
+              className="text-white text-center  text-lg font-bold capitalize  group-hover:text-custom-yellow"
+            >
+              support
+            </a>
+            <div className=" hidden border-b border-2 border-white mx-4 group-hover:block  group-hover:border-custom-yellow "></div>
+          </div>
+        </div>
+
+        {/* buttons Container */}
+        <div className="flex mx-2">
+          <button
+            className="bg-custom-blue font-bold text-lg rounded-full mx-2 py-3 px-6
+           text-white hover:-translate-y-0.5 transition duration-150 hover:opacity-50 hover:bg-custom-yellow"
+          >
+            Get Started
+          </button>
+          <button
+            className=" bg-transparent border-2 border-custom-blue font-bold text-lg 
+          rounded-full mx-2 py-3 px-6 text-custom-blue hover:-translate-y-0.5 transition 
+          duration-150 hover:opacity-50 hover:border-custom-yellow hover:text-custom-yellow"
+          >
+            Log In
+          </button>
+        </div>
+      </nav>
     </div>
   );
 }
