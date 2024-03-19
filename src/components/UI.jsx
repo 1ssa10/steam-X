@@ -4,16 +4,15 @@ import React from "react";
 function UI() {
   return (
     <>
-      <div className="interface">
-        {/* <div className="title">Steam-x</div> */}
-        <div className="button"></div>
+      <div className="absolute top-1/2 -translate-y-1/2 w-full  md:w-1/2">
+        <div className="flex flex-col items-center justify-center text-white space-y-6">
+          <h1 className="text-5xl text-white font-bold uppercase">steamX</h1>
+          <p>
+            we are committed to offer your kids an education in coding, robotics
+            and electronics
+          </p>
+        </div>
       </div>
-      <div className="absolute  top-1/3 text-custom-yellow lg:w-1/2 sm:w-screen md:w-screen  text-center ">
-        Welcome to Steam-X Robotics where all your imagination comes to Life
-      </div>
-      <button className=" absolute left-1/4 top-1/2 bg-custom-blue text-white hover:bg-transparent hover:text-red-600 py-2 px-4 rounded">
-        hello
-      </button>
     </>
   );
 }

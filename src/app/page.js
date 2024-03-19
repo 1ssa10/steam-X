@@ -40,11 +40,20 @@ export default function Home() {
       </Canvas>
       <Navbar />
       <UI />
-      {/* <div className=" absolute -bottom-10 w-full h-20 bg-custom-yellow md:w-1/2 md:-ml-96 md:left-1/2 ">
-        hello
-      </div> */}
-      <div className="flex justify-center w-full  bg-custom-yellow md:absolute md:w-1/2 md:left-1/2 md:-translate-y-1/2 md:-translate-x-1/2 ">
-        <div className="">hello</div>
+
+      {/* search Bar positioning */}
+      <div className="flex justify-center w-full  bg-custom-yellow md:absolute md:w-1/2 md:left-1/2 md:-translate-y-1/2 md:-translate-x-1/2 md:rounded-full ">
+        {/*  searchbar container  */}
+        <div className="flex flex-col w-full items-center justify-center my-1 mx-4  space-y-2 md:flex-row md:justify-between md:my-4 md:space-x-5 md:space-y-0">
+          <input
+            type="text"
+            className="flex-1 p-2 w-full  rounded-full border-b border-custom-black focus:outline-none"
+            placeholder="Search"
+          />
+          <button className="bg-custom-black text-custom-yellow py-2 px-4 rounded-full">
+            hello
+          </button>
+        </div>
       </div>
     </>
   );

@@ -56,20 +56,22 @@ function Navbar() {
         {/* buttons Container */}
         <div className="flex mx-2">
           <button
-            className="bg-custom-blue font-bold text-lg rounded-full mx-2 py-3 px-6
+            className="bg-custom-blue font-bold text-sm rounded-full mx-2 py-3 px-6
            text-white hover:-translate-y-0.5 transition duration-150 hover:opacity-50 hover:bg-custom-yellow"
           >
             Get Started
           </button>
           <button
-            className=" bg-transparent border-2 border-custom-blue font-bold text-lg 
+            className=" bg-transparent border-2 border-custom-blue font-bold text-sm 
           rounded-full mx-2 py-3 px-6 text-custom-blue hover:-translate-y-0.5 transition 
           duration-150 hover:opacity-50 hover:border-custom-yellow hover:text-custom-yellow"
           >
             Log In
           </button>
         </div>
+        {/* @todo hamburger menu */}
       </nav>
+      {/*  mobile menu */}
     </div>
   );
 }
