@@ -41,17 +41,37 @@ export default function Home() {
       <Navbar />
       <UI />
 
+      {/* border btw hero and sections */}
+      <div className="absolute  border-b-[8px] border-custom-yellow w-full  -translate-y-1/2  "></div>
       {/* search Bar positioning */}
-      <div className="flex justify-center w-full  bg-custom-yellow md:absolute md:w-1/2 md:left-1/2 md:-translate-y-1/2 md:-translate-x-1/2 md:rounded-full ">
+      <div
+        className="absolute md:bottom-0 flex flex-col md:flex-row -translate-y-full  md:justify-center w-full  md:bg-custom-yellow    
+      md:w-1/2 md:left-1/2 md:translate-y-1/2 md:-translate-x-1/2 md:rounded-full "
+      >
+        <p
+          className="text-center p-4  md:text-left uppercase md:max-w-md text-custom-white
+            leading-5 tracking-tight border border-white md:text-2xl block md:hidden "
+        >
+          we are committed to offer your kids an education in coding, robotics
+          and electronics
+        </p>
         {/*  searchbar container  */}
-        <div className="flex flex-col w-full items-center justify-center my-1 mx-4  space-y-2 md:flex-row md:justify-between md:my-4 md:space-x-5 md:space-y-0">
+        <div
+          className="flex  w-full items-center justify-center mx-auto my-3 md:mx-2 space-x-2
+          md:justify-between md:my-4 md:space-x-5  md:mb-4"
+        >
           <input
             type="text"
-            className="flex-1 p-2 w-full  rounded-full border-b border-custom-black focus:outline-none"
+            className="flex-1 p-2  rounded-full font-bold  border-2  border-custom-blue focus:outline-none
+             bg-transparent md:bg-custom-white placeholder:text-custom-blue placeholder:text-center  md:placeholder:text-left"
             placeholder="Search"
           />
-          <button className="bg-custom-black text-custom-yellow py-2 px-4 rounded-full">
-            hello
+
+          <button
+            className=" bg-transparent md:bg-custom-white text-custom-blue py-2 px-10 rounded-full font-bold border-2 border-custom-blue
+             "
+          >
+            GO
           </button>
         </div>
       </div>
