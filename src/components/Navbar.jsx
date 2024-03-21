@@ -96,7 +96,7 @@ function Navbar() {
       </nav>
       {/*  mobile menu */}
       <div
-        className={`absolute ${
+        className={`absolute z-30 ${
           openMenu ? "block" : "hidden"
         } top-1 left-1/2 -translate-x-1/2 w-full md:hidden `}
       >
